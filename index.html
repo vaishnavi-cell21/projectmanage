@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waypoint — Project Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-mark"><i></i><i></i></span><span>waypoint</span></div>
+      <div class="workspace-switcher">
+        <div class="workspace-avatar">O</div>
+        <div><strong>sam's workspace</strong><small>Personal team</small></div>
+        <button class="icon-button tiny" aria-label="Switch workspace">⌄</button>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <p class="nav-label">Workspace</p>
+        <button class="nav-item active" data-view="Overview"><span class="nav-icon">◈</span>Overview</button>
+        <button class="nav-item" data-view="My tasks"><span class="nav-icon">✓</span>My tasks<span class="nav-count">7</span></button>
+        <button class="nav-item" data-view="Projects"><span class="nav-icon">▦</span>Projects</button>
+        <button class="nav-item" data-view="Calendar"><span class="nav-icon">□</span>Calendar</button>
+        <p class="nav-label nav-label-spaced">Manage</p>
+        <button class="nav-item" data-view="Team"><span class="nav-icon">♧</span>Team</button>
+        <button class="nav-item" data-view="Reports"><span class="nav-icon">▥</span>Reports</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="upgrade-card"><div class="upgrade-icon">✦</div><strong>Make work flow.</strong><p>Unlock smarter planning with Waypoint Pro.</p><button>Explore Pro <span>→</span></button></div>
+        <button class="nav-item"><span class="nav-icon">?</span>Help center</button>
+        <button class="nav-item"><span class="nav-icon">⚙</span>Settings</button>
+        <div class="profile"><div class="avatar avatar-photo">OS</div><div><strong>Olivia Smith</strong><small>Admin</small></div><span class="more">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu icon-button" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="breadcrumbCurrent">Overview</strong></div>
+        <div class="top-actions">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search anything..." /><kbd>⌘ K</kbd></label>
+          <button class="icon-button notification-button" id="notificationButton" aria-label="View notifications"><span>♧</span><em></em></button>
+          <button class="new-project-button" id="newProjectButton"><span>＋</span> New project</button>
+        </div>
+      </header>
+
+      <div class="page-wrap">
+        <section class="page-intro">
+          <div><p class="eyebrow"><span class="live-dot"></span> Friday, August 16, 2024</p><h1>Good morning, Olivia <span>✦</span></h1><p class="intro-copy">Here's what's happening across your workspace today.</p></div>
+          <div class="date-control"><span>▣</span> This week <b>⌄</b></div>
+        </section>
+
+        <section class="metric-grid" aria-label="Workspace metrics">
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">Active projects</span><span class="metric-icon blue">↗</span></div><strong class="metric-value">12</strong><div class="metric-foot"><span class="trend positive">↑ 8.2%</span><span>vs last month</span><div class="sparkline blue-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">Tasks due this week</span><span class="metric-icon coral">◷</span></div><strong class="metric-value">28</strong><div class="metric-foot"><span class="trend warning">↑ 12.4%</span><span>vs last week</span><div class="sparkline coral-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">Team utilization</span><span class="metric-icon lime">⌁</span></div><strong class="metric-value">84<span>%</span></strong><div class="metric-foot"><span class="trend positive">↑ 4.6%</span><span>vs last month</span><div class="sparkline lime-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">Budget used</span><span class="metric-icon yellow">₹</span></div><strong class="metric-value">₹74.2<span class="unit">k</span></strong><div class="metric-foot"><span class="trend neutral">— 0.8%</span><span>of ₹120k total</span><div class="budget-track"><i></i></div></div></article>
+        </section>
+
+        <section class="content-grid">
+          <div class="left-column">
+            <article class="panel health-panel">
+              <div class="panel-header"><div><h2>Project health</h2><p>Live status across your active projects</p></div><button class="text-button">View all <span>→</span></button></div>
+              <div class="health-list">
+                <div class="project-row"><div class="project-symbol symbol-orange">N</div><div class="project-info"><strong>Northstar Mobile App</strong><span>Product · 8 members</span></div><div class="project-progress"><div class="progress-label"><span>On track</span><b>72%</b></div><div class="progress-bar"><i style="width:72%;background:#b7e34a"></i></div></div><span class="project-date">Sep 24</span><button class="row-more">•••</button></div>
+                <div class="project-row"><div class="project-symbol symbol-teal">A</div><div class="project-info"><strong>Atlas Brand Refresh</strong><span>Marketing · 5 members</span></div><div class="project-progress"><div class="progress-label"><span>At risk</span><b>46%</b></div><div class="progress-bar"><i style="width:46%;background:#f4b740"></i></div></div><span class="project-date">Aug 30</span><button class="row-more">•••</button></div>
+                <div class="project-row"><div class="project-symbol symbol-lilac">M</div><div class="project-info"><strong>Mercury Website</strong><span>Engineering · 12 members</span></div><div class="project-progress"><div class="progress-label"><span>On track</span><b>88%</b></div><div class="progress-bar"><i style="width:88%;background:#b7e34a"></i></div></div><span class="project-date">Sep 06</span><button class="row-more">•••</button></div>
+                <div class="project-row"><div class="project-symbol symbol-blue">Q</div><div class="project-info"><strong>Q3 Campaign Launch</strong><span>Growth · 6 members</span></div><div class="project-progress"><div class="progress-label"><span>Blocked</span><b>31%</b></div><div class="progress-bar"><i style="width:31%;background:#e97965"></i></div></div><span class="project-date">Sep 12</span><button class="row-more">•••</button></div>
+              </div>
+            </article>
+
+            <article class="panel tasks-panel">
+              <div class="panel-header"><div><h2>My tasks</h2><p>Your focus for the week</p></div><div class="panel-tools"><div class="segmented"><button class="selected">All</button><button>Open</button><button>Done</button></div><button class="icon-button">•••</button></div></div>
+              <div class="task-table"><div class="task-head"><span>Task</span><span>Project</span><span>Due date</span><span>Priority</span></div>
+                <div class="task-row" data-task="Review onboarding flow"><label class="task-check"><input type="checkbox"><span></span></label><strong>Review onboarding flow</strong><span class="project-tag tag-orange">Northstar</span><span class="due soon">Today</span><span class="priority high">High</span></div>
+                <div class="task-row" data-task="Finalize campaign brief"><label class="task-check"><input type="checkbox"><span></span></label><strong>Finalize campaign brief</strong><span class="project-tag tag-teal">Atlas</span><span class="due">Aug 19</span><span class="priority medium">Medium</span></div>
+                <div class="task-row" data-task="QA responsive layouts"><label class="task-check"><input type="checkbox"><span></span></label><strong>QA responsive layouts</strong><span class="project-tag tag-lilac">Mercury</span><span class="due">Aug 20</span><span class="priority low">Low</span></div>
+                <div class="task-row" data-task="Share user research notes"><label class="task-check"><input type="checkbox"><span></span></label><strong>Share user research notes</strong><span class="project-tag tag-orange">Northstar</span><span class="due">Aug 22</span><span class="priority medium">Medium</span></div>
+              </div>
+              <button class="add-task"><span>＋</span> Add a task</button>
+            </article>
+          </div>
+
+          <div class="right-column">
+            <article class="panel pulse-panel"><div class="panel-header"><div><h2>Team pulse</h2><p>Capacity this week</p></div><button class="icon-button">•••</button></div><div class="pulse-chart"><div class="chart-y"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span></div><div class="chart-area"><div class="grid-lines"></div><div class="bars"><div class="bar-group"><i style="height:50%"></i><i style="height:73%"></i><i style="height:42%"></i><small>Mon</small></div><div class="bar-group"><i style="height:68%"></i><i style="height:88%"></i><i style="height:56%"></i><small>Tue</small></div><div class="bar-group"><i style="height:42%"></i><i style="height:61%"></i><i style="height:80%"></i><small>Wed</small></div><div class="bar-group"><i style="height:78%"></i><i style="height:51%"></i><i style="height:91%"></i><small>Thu</small></div><div class="bar-group"><i style="height:62%"></i><i style="height:76%"></i><i style="height:49%"></i><small>Fri</small></div></div></div></div><div class="chart-legend"><span><i class="legend-lime"></i>Design</span><span><i class="legend-blue"></i>Engineering</span><span><i class="legend-coral"></i>Marketing</span></div></article>
+            <article class="panel activity-panel"><div class="panel-header"><div><h2>Recent activity</h2><p>What your team has been up to</p></div><button class="text-button">See all</button></div><div class="activity-list"><div class="activity-item"><div class="avatar avatar-coral">MK</div><p><strong>Maya Kim</strong> completed <b>Update pricing page</b><small>12 minutes ago · Mercury Website</small></p></div><div class="activity-item"><div class="avatar avatar-blue">JR</div><p><strong>Jon Reyes</strong> commented on <b>Onboarding flow v2</b><small>44 minutes ago · Northstar Mobile App</small></p></div><div class="activity-item"><div class="avatar avatar-lime">SC</div><p><strong>Sam Chen</strong> moved <b>Campaign brief</b> to review<small>2 hours ago · Atlas Brand Refresh</small></p></div><div class="activity-item"><div class="avatar avatar-purple">NP</div><p><strong>Nia Patel</strong> joined <b>Q3 Campaign Launch</b><small>Yesterday at 4:18 PM · Q3 Campaign</small></p></div></div></article>
+          </div>
+        </section>
+        <footer class="page-footer"><span>Waypoint workspace</span><span>Last synced just now <i></i></span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="notification-popover" id="notificationPopover"><strong>Notifications</strong><p>3 tasks need your attention today.</p><a href="#">Open inbox →</a></div>
+  <div class="modal-backdrop" id="modalBackdrop"><div class="modal"><button class="modal-close" id="modalClose">×</button><p class="eyebrow">New workspace project</p><h2>Start something great.</h2><p class="modal-copy">Set up the basics now. You can fill in the rest as the work takes shape.</p><label>Project name<input id="projectName" placeholder="e.g. Website redesign" /></label><label>Team or department<select><option>Product</option><option>Marketing</option><option>Engineering</option><option>Operations</option></select></label><div class="modal-actions"><button class="cancel-button" id="cancelModal">Cancel</button><button class="create-button" id="createProject">Create project <span>→</span></button></div></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
